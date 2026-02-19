@@ -1,0 +1,89 @@
+<html>
+<head>
+    <style>
+        h1{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: grey;
+        }
+
+        li{
+            color:white;
+        }
+
+        .menu{
+            background-color: black;
+            border-radius: 10px;
+            padding: 2px 3px 5px 5px ;
+            width:500px;
+            flex:auto;
+            margin: auto;
+        }
+
+        /* 🔥 CHANGED PART */
+        .drinks{
+            display: flex;              /* makes images side by side */
+            justify-content: center;   /* centers them */
+            gap: 20px;                 /* space between images */
+            margin-top: 20px;
+        }
+
+        .drinks img{
+            border-radius:50px;
+            width:200px;      /* optional size control */
+            height:auto;
+        }
+
+        .link{
+            text-align: center;
+            background-color:goldenrod;
+            height:100px;
+            padding-top:35px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <h1>MOCHA TOKA RESTAURANT</h1>
+
+        <ul>
+            <li>DRINKS</li>
+            <dl>the most famous drinks lies here</dl>
+
+            <ol type="I">
+                <li>HOLY COFFEE</li>
+                <li>MOCHA MASTI</li>
+                <li>FUN DUN GLASS</li>
+                <li>HAPPY HOUR</li>
+                <li>MARGHARITA</li>
+                <li>LA PRICY</li>
+            </ol>
+
+            <li>FOOD</li>
+            <dl>delicous food lies here</dl>
+
+            <ol>
+                <li>GARLIC BREAD</li>
+                <li>GONUT DONUT</li>
+                <li>FOCUSED PIZZA</li>
+                <li>PASTA MASTAA</li>
+            </ol>
+        </ul>
+    </div>
+
+    <!-- DRINK IMAGES SIDE BY SIDE -->
+    <div class="drinks">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="drink1">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEfi-vrPt3mrLT_cnv0rm2QmncXErIjHifA&s" 
+             alt="drink image">
+    </div>
+
+    <div class="link">
+        <a href="#">RESERVATIONS</a>
+    </div>
+
+</body>
+</html>
