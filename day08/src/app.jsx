@@ -1,39 +1,30 @@
 import React, { useState } from 'react'
 
+
 const App = () => {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
-  const [editIndex, setEditIndex] = useState(null);
-  console.log(editIndex);
+  console.log(tasks);
   const handleAdd = (e) => {
     e.preventDefault();
-    if (editIndex !== null) {
-      let updatedTask = [...tasks];
-      updatedTask[editIndex] = task;
-      setTasks(updatedTask);
-      setEditIndex(null);
-    } else {
-      setTasks([...tasks, task]);
-    }
+    setTasks([...tasks, task]);
     setTask("");
   }
   const handleDelete = (index) => {
-    let updatedTask = [...tasks];
-    updatedTask = updatedTask.filter((_, i) => i !== index);
-    setTasks(updatedTask);
+  let updatedTask = tasks.filter((_, i) => i !== index);
+  setTasks(updatedTask);}
   }
   const handleEdit = (index) => {
-    setTask(tasks[index]);
-    setEditIndex(index);
+
   }
   return (
     <div>
-      <h1 style={{color:"blanchedalmond"}}>TODO LIST</h1>
+      <h1>TO DO LIST</h1>
       <input type="text" name="task" id="task"
         placeholder='Enter Task Here'
         value={task}
         onChange={(e) => setTask(e.target.value)} />
-      <button onClick={handleAdd}>{editIndex !== null ? "UPDATE" : "ADD"}</button>
+      <button onClick={handleAdd}>Add</button>
 
       <div>
         <h2>Tasks</h2>
@@ -49,6 +40,6 @@ const App = () => {
       </div>
     </div>
   )
-}
+
 
 export default App;
